@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Triggered</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .alert {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-warning">
+            <h1>ALARM!</h1>
+            <p>{{.Message}}</p>
+        </div>
+
+        <form id="reschedule-form" action="/reschedule_alarm" method="POST">
+            <input type="hidden" name="message" value="{{.Message}}">
+            <div class="form-group">
+                <label for="new_time">New Alarm Time:</label>
+                <input type="datetime-local" class="form-control" id="new_time" name="new_time" required>
+            </div>
+            <input type="submit" class="btn btn-warning" value="Reschedule Alarm">
+        </form>
+
+        <form id="stop-form" action="/stop_alarm" method="POST" style="margin-top: 20px;">
+            <input type="hidden" name="message" value="{{.Message}}">
+            <input type="submit" class="btn btn-danger" value="Stop Alarm">
+        </form>
+
+        <a href="/" class="btn btn-primary" style="margin-top: 20px;">Go to Home</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
