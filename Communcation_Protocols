@@ -1,0 +1,26 @@
+Types by Communication Protocols:
+REST (Representational State Transfer) API
+
+Definition: RESTful APIs use HTTP requests for communication and usually exchange data in JSON format.
+Example: GitHub API, Twitter API.
+SOAP (Simple Object Access Protocol) API
+
+Definition: SOAP APIs use XML for message formatting and are typically more secure, but heavier compared to REST.
+Example: Payment gateways, legacy financial systems.
+GraphQL API
+
+Definition: A query language API that allows clients to request specific data in a more efficient way compared to REST.
+Example: GitHub GraphQL API.
+gRPC API
+
+Definition: gRPC (Google Remote Procedure Call) APIs use Protocol Buffers (binary serialization) for communication, which is faster and more efficient.
+Example: Services within Google or Netflix.
+WebSockets API
+
+Definition: WebSockets enable real-time communication between the client and server by maintaining an open connection.
+Example: Real-time messaging applications like chat services or stock tickers.
+RPC (Remote Procedure Call) API
+
+Definition: In RPC, the client executes code on a remote server using either JSON-RPC or XML-RPC.
+Example: Systems using microservices architectures for distributed services.
+These are the common types of APIs used in various applications today. Each type serves a specific use case and is chosen based on factors like performance, ease of use, and security needs.
